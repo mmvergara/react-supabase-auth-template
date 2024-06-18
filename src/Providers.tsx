@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
-import { UserDataProvider } from "./context/AuthContext";
+import { SessionProvider } from "./context/SessionContext";
 
 const Providers = () => {
   return (
-    <UserDataProvider>
+    <SessionProvider>
       <Outlet />
-    </UserDataProvider>
+    </SessionProvider>
   );
 };
 

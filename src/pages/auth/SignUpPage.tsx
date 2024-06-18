@@ -1,16 +1,14 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useState } from "react";
 import { Link, Navigate } from "react-router-dom";
-import { FirebaseAuth } from "../../supabase";
-import { FirebaseError } from "firebase/app";
-import { useUser } from "../../context/AuthContext";
+import { useSession } from "../../context/SessionContext";
+import supabase from "../../supabase";
 
 const SignUpPage = () => {
   // ==============================
   // If user is already logged in, redirect to home
   // This logic is being repeated in SignIn and SignUp..
-  const { user } = useUser();
-  if (user) return <Navigate to="/" />;
+  const { session } = useSession();
+  if (session) return <Navigate to="/" />;
   // maybe we can create a wrapper component for these pages
   // just like the ./router/AuthProtectedRoute.tsx? up to you.
   // ==============================
@@ -26,14 +24,11 @@ const SignUpPage = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      await createUserWithEmailAndPassword(
-        FirebaseAuth,
-        formValues.email,
-        formValues.password
-      );
-    } catch (e) {
-      const error = e as FirebaseError;
+    const { error } = await supabase.auth.signUp({
+      email: formValues.email,
+      password: formValues.password,
+    });
+    if (error) {
       alert(error.message);
     }
   };

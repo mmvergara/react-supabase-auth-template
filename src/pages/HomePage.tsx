@@ -1,23 +1,23 @@
 import { Link } from "react-router-dom";
-import { useUser } from "../context/AuthContext";
-import { FirebaseAuth } from "../supabase";
+import supabase from "../supabase";
+import { useSession } from "../context/SessionContext";
 
 const HomePage = () => {
-  const { user } = useUser();
+  const { session } = useSession();
   return (
     <main>
       <section className="main-container">
-        <h1 className="header-text">React Firebase Auth Template</h1>
-        <p>Current User : {user?.email || "None"}</p>
-        {user ? (
-          <button onClick={() => FirebaseAuth.signOut()}>Sign Out</button>
+        <h1 className="header-text">React Supabase Auth Template</h1>
+        <p>Current User : {session?.user.email || "None"}</p>
+        {session ? (
+          <button onClick={() => supabase.auth.signOut()}>Sign Out</button>
         ) : (
           <Link to="/auth/sign-in">Sign In</Link>
         )}
         <Link to="/protected">Protected Page 🛡️</Link>
         <div id="divider"></div>
         <Link
-          to="https://github.com/mmvergara/react-firebase-auth-template"
+          to="https://github.com/mmvergara/react-supabase-auth-template"
           target="_blank"
           rel="noreferrer noopener"
           id="github-repo-link"

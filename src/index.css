@@ -6,7 +6,7 @@
 }
 
 body {
-  background-color: #ffbf78;
+  background-color: #3ecf8e;
   color: white;
 }
 
@@ -81,7 +81,7 @@ a {
   background: none;
   cursor: pointer;
   color: white;
-  background: #e36414;
+  background: hsl(154, 62%, 22%);
   border: none;
   border-radius: 0.125em;
   transition: background-color 0.3s;
@@ -92,10 +92,11 @@ a {
   justify-content: center;
   align-items: center;
   height: 40px;
+  border: 1px solid hsl(154, 62%, 42%);
 }
 button:hover,
 a:hover {
-  background: #f8751e;
+  background: hsl(154, 62%, 28%);
 }
 
 .home-link {
