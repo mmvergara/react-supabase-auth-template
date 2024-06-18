@@ -11,7 +11,7 @@
 - 🚀 Protected Routes
 - 🚀 Supabase Session Object in Global Context via `useSession`
 - 🚀 User Authentication
-- 🚀 Routinga
+- 🚀 Routing and Route Guards
 
 It's also blazingly fast 🔥 No really, [try it out for yourself.](https://react-supabase-auth-template.vercel.app/)
 
