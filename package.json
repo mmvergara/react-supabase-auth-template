@@ -1,6 +1,5 @@
 {
-  "name": "kanban-light",
-  "description":"Open-source light weight kanban board",
+  "name": "react-supabase-auth-template",
   "author": "mmvergara",
   "license": "MIT",
   "private": true,

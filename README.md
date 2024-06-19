@@ -1,4 +1,6 @@
-# React Supabase Auth with Protected Routes
+<p align="center">
+<h1>React Supabase Auth with Protected Routes</h1>
+</p>
 
 [**`🌐 App Demo`**](https://react-supabase-auth-template.vercel.app/)
 
