@@ -2,11 +2,11 @@
 <h1 align="center">React Supabase Auth with Protected Routes</h1>
 </p>
 
-[**`🌐 App Demo`**](https://react-supabase-auth-template.vercel.app/)
-
 <p align="center">
 <img src="remove_me.png" width="450">
 </p>
+
+[**`🌐 App Demo`**](https://react-supabase-auth-template.vercel.app/)
 
 ## Features
 
