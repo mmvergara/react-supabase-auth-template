@@ -17,6 +17,7 @@
 
 It's also blazingly fast 🔥 No really, [try it out for yourself.](https://react-supabase-auth-template.vercel.app/)
 
+[We also have a similar template for FIREBASE 🔥](https://github.com/mmvergara/react-firebase-auth-template)
 ## Getting Started
 
 1. Clone the repository
