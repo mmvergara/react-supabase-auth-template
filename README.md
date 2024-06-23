@@ -23,6 +23,10 @@ It's also blazingly fast 🔥 No really, [try it out for yourself.](https://reac
 1. Clone the repository
 2. Install dependencies: `npm install`
 3. Create `.env` using the `.env.example` as a template
+```
+VITE_SUPABASE_URL=
+VITE_SUPABASE_ANON_KEY=
+```
 4. Run the app: `npm run dev`
 
 ## What you need to know
