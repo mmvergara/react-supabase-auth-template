@@ -12,7 +12,7 @@ const SignUpPage = () => {
   // maybe we can create a wrapper component for these pages
   // just like the ./router/AuthProtectedRoute.tsx? up to you.
   // ==============================
-
+  const [status, setStatus] = useState("");
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
@@ -24,6 +24,7 @@ const SignUpPage = () => {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setStatus("Creating account...");
     const { error } = await supabase.auth.signUp({
       email: formValues.email,
       password: formValues.password,
@@ -31,6 +32,7 @@ const SignUpPage = () => {
     if (error) {
       alert(error.message);
     }
+    setStatus("");
   };
 
   return (
@@ -65,6 +67,7 @@ const SignUpPage = () => {
         <Link className="auth-link" to="/auth/sign-in">
           Already have an account? Sign In
         </Link>
+        {status && <p>{status}</p>}
       </form>
     </main>
   );
