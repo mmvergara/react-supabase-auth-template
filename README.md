@@ -35,3 +35,15 @@ VITE_SUPABASE_ANON_KEY=
 - `/context/SessionContext.tsx` is where you can find the `useSession` hook
   - This hook gives you access to the `session` object from Supabase globally
 - `/Providers.tsx` is where you can add more `providers` or `wrappers`
+
+
+## More Starter Templates
+
+- [React Supabase Auth Template 🌟](https://github.com/mmvergara/react-supabase-auth-template)
+- [NextJs MongoDB Prisma Auth Template 🌟](https://github.com/mmvergara/nextjs-mongodb-prisma-auth-template)
+- [NextJs Discord Bot Template 🌟](https://github.com/mmvergara/nextjs-discord-bot-boilerplate)
+- [React Firebase🔥 Auth Template 🌟](https://github.com/mmvergara/react-firebase-auth-template)
+- [Golang Postgres Auth Template](https://github.com/mmvergara/golang-postgresql-auth-template)
+- [Vue Supabase Auth Template](https://github.com/mmvergara/vue-supabase-auth-starter-template)
+- [Remix Drizzle Auth Template](https://github.com/mmvergara/remix-drizzle-auth-template)
+
