@@ -36,14 +36,14 @@ VITE_SUPABASE_ANON_KEY=
   - This hook gives you access to the `session` object from Supabase globally
 - `/Providers.tsx` is where you can add more `providers` or `wrappers`
 
+## Other Supabase Templates
 
+- [React ShadCN Supabase Auth Template 🌟](https://github.com/mmvergara/react-supabase-shadcn-auth-template)
+- [NextJs ShadCN Supabase Auth Template 🌟](https://github.com/mmvergara/nextjs-shadcn-supabase-auth-starter)
 
 ## More Starter Templates
 
-- [React Supabase Auth Template 🌟](https://github.com/mmvergara/react-supabase-auth-template)
-- [React ShadCN Supabase Auth Template 🌟](https://github.com/mmvergara/react-supabase-shadcn-auth-template)
 - [NextJs MongoDB Prisma Auth Template 🌟](https://github.com/mmvergara/nextjs-mongodb-prisma-auth-template)
-- [NextJs ShadCN Supabase Auth Template 🌟](https://github.com/mmvergara/nextjs-shadcn-supabase-auth-starter)
 - [NextJs Discord Bot Template 🌟](https://github.com/mmvergara/nextjs-discord-bot-boilerplate)
 - [React Firebase🔥 Auth Template 🌟](https://github.com/mmvergara/react-firebase-auth-template)
 - [Golang Postgres Auth Template](https://github.com/mmvergara/golang-postgresql-auth-template)
