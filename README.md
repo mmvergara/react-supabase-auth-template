@@ -37,13 +37,16 @@ VITE_SUPABASE_ANON_KEY=
 - `/Providers.tsx` is where you can add more `providers` or `wrappers`
 
 
+
 ## More Starter Templates
 
 - [React Supabase Auth Template 🌟](https://github.com/mmvergara/react-supabase-auth-template)
+- [React ShadCN Supabase Auth Template 🌟](https://github.com/mmvergara/react-supabase-shadcn-auth-template)
 - [NextJs MongoDB Prisma Auth Template 🌟](https://github.com/mmvergara/nextjs-mongodb-prisma-auth-template)
+- [NextJs ShadCN Supabase Auth Template 🌟](https://github.com/mmvergara/nextjs-shadcn-supabase-auth-starter)
 - [NextJs Discord Bot Template 🌟](https://github.com/mmvergara/nextjs-discord-bot-boilerplate)
 - [React Firebase🔥 Auth Template 🌟](https://github.com/mmvergara/react-firebase-auth-template)
 - [Golang Postgres Auth Template](https://github.com/mmvergara/golang-postgresql-auth-template)
+- [Vue Golang PostgresSql Auth Template](https://github.com/mmvergara/vue-golang-postgresql-auth-starter-template)
 - [Vue Supabase Auth Template](https://github.com/mmvergara/vue-supabase-auth-starter-template)
 - [Remix Drizzle Auth Template](https://github.com/mmvergara/remix-drizzle-auth-template)
-
