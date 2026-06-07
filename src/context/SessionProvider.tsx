@@ -1,21 +1,8 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import supabase from "../supabase";
 import LoadingPage from "../pages/LoadingPage";
 import { Session } from "@supabase/supabase-js";
-
-const SessionContext = createContext<{
-  session: Session | null;
-}>({
-  session: null,
-});
-
-export const useSession = () => {
-  const context = useContext(SessionContext);
-  if (!context) {
-    throw new Error("useSession must be used within a SessionProvider");
-  }
-  return context;
-};
+import { SessionContext } from "./SessionContext";
 
 type Props = { children: React.ReactNode };
 export const SessionProvider = ({ children }: Props) => {
@@ -24,7 +11,7 @@ export const SessionProvider = ({ children }: Props) => {
 
   useEffect(() => {
     const authStateListener = supabase.auth.onAuthStateChange(
-      async (_, session) => {
+      (_, session) => {
         setSession(session);
         setIsLoading(false);
       }
@@ -33,11 +20,11 @@ export const SessionProvider = ({ children }: Props) => {
     return () => {
       authStateListener.data.subscription.unsubscribe();
     };
-  }, [supabase]);
+  }, []);
 
   return (
-    <SessionContext.Provider value={{ session }}>
+    <SessionContext value={{ session }}>
       {isLoading ? <LoadingPage /> : children}
-    </SessionContext.Provider>
+    </SessionContext>
   );
 };

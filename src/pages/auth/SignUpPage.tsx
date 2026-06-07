@@ -7,16 +7,17 @@ const SignUpPage = () => {
   // ==============================
   // If user is already logged in, redirect to home
   // This logic is being repeated in SignIn and SignUp..
-  const { session } = useSession();
-  if (session) return <Navigate to="/" />;
   // maybe we can create a wrapper component for these pages
   // just like the ./router/AuthProtectedRoute.tsx? up to you.
   // ==============================
+  const { session } = useSession();
   const [status, setStatus] = useState("");
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
   });
+
+  if (session) return <Navigate to="/" />;
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormValues({ ...formValues, [e.target.name]: e.target.value });
