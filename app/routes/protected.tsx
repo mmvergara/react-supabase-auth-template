@@ -1,5 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import { useSession } from "../context/SessionContext";
+import type { Route } from "./+types/protected";
+
+export const meta: Route.MetaFunction = () => [
+  { title: "Protected Page | React Supabase Auth Template" },
+];
 
 const ProtectedPage = () => {
   const { session } = useSession();

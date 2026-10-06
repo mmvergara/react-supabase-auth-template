@@ -1,5 +1,5 @@
-import { Outlet } from "react-router-dom";
-import NotFoundPage from "../pages/404Page";
+import { Outlet } from "react-router";
+import NotFoundPage from "./not-found";
 import { useSession } from "../context/SessionContext";
 
 const AuthProtectedRoute = () => {

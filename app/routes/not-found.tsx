@@ -1,4 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
+import type { Route } from "./+types/not-found";
+
+export const meta: Route.MetaFunction = () => [
+  { title: "404 Page Not Found | React Supabase Auth Template" },
+];
 
 const NotFoundPage: React.FC = () => {
   return (

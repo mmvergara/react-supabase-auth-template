@@ -31,10 +31,13 @@ VITE_SUPABASE_ANON_KEY=
 
 ## What you need to know
 
-- `/router/index.tsx` is where you declare your routes
-- `/context/SessionContext.tsx` is where you can find the `useSession` hook
+- Built with [React Router v8](https://reactrouter.com) framework mode in SPA mode (`ssr: false` in `react-router.config.ts`)
+- `app/routes.ts` is where you declare your routes, each route module lives in `app/routes/`
+  - `app/routes/auth-protected-layout.tsx` guards every route nested under it
+- `app/context/SessionContext.ts` is where you can find the `useSession` hook
   - This hook gives you access to the `session` object from Supabase globally
-- `/Providers.tsx` is where you can add more `providers` or `wrappers`
+- `app/root.tsx` is the HTML document and where you can add more `providers` or `wrappers`
+- `npm run build` outputs a static site to `build/client`
 
 ## Other Supabase Templates
 

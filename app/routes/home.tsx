@@ -1,6 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 import supabase from "../supabase";
 import { useSession } from "../context/SessionContext";
+import type { Route } from "./+types/home";
+
+export const meta: Route.MetaFunction = () => [
+  { title: "React Supabase Auth Template" },
+];
 
 const HomePage = () => {
   const { session } = useSession();

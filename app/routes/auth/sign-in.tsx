@@ -1,14 +1,19 @@
 import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router";
 import { useSession } from "../../context/SessionContext";
 import supabase from "../../supabase";
+import type { Route } from "./+types/sign-in";
+
+export const meta: Route.MetaFunction = () => [
+  { title: "Sign In | React Supabase Auth Template" },
+];
 
 const SignInPage = () => {
   // ==============================
   // If user is already logged in, redirect to home
   // This logic is being repeated in SignIn and SignUp..
   // maybe we can create a wrapper component for these pages
-  // just like the ./router/AuthProtectedRoute.tsx? up to you.
+  // just like the routes/auth-protected-layout.tsx? up to you.
   // ==============================
   const { session } = useSession();
   const [status, setStatus] = useState("");

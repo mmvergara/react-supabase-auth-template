@@ -9,6 +9,10 @@ lerna-debug.log*
 
 node_modules
 dist
+
+# React Router
+/.react-router/
+/build/
 dist-ssr
 *.local
 .env

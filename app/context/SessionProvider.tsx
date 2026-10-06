@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase";
-import LoadingPage from "../pages/LoadingPage";
-import { Session } from "@supabase/supabase-js";
+import LoadingPage from "../components/LoadingPage";
+import type { Session } from "@supabase/supabase-js";
 import { SessionContext } from "./SessionContext";
 
 type Props = { children: React.ReactNode };
